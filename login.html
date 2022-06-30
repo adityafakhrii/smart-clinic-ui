@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login | Smart Clinic</title>
+    <link rel="stylesheet" type="text/css" href="css/style-login.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <img class="wave" src="assets/wave.png" alt="bg.png">
+    <div class="container">
+        <div class="img">
+            <img src="assets/bglogin.svg" alt="">
+        </div>
+        <div class="login-container">
+            <form action="#" method="POST" class="form">
+                <img class="avatar" src="assets/avatar.svg" alt="avatar.svg">
+                <h2>Panasonic | <span class="title">Smart Clinic</span></h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-at"></i>
+                    </div>
+                    <div>
+                        <h5 class="placehorder">Username</h5>
+                        <input class="input" name="username" type="username" id="username" autocomplete="off">
+                    </div>
+                </div>
+                <span class="pesan pesan-nama">Username required!</span>
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5 class="placeholder">Password</h5>
+                        <input class="input" name="password" type="password" id="password" autocomplete="off">
+                    </div>
+                </div>
+                <span class="pesan pesan-password">Password required!</span>
+                <a class="forgot" href="#">Forgot Password</a>
+                <button onclick="return confirmLogin();" type="submit" class="btn">Login</button>
+                <br>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="follow">
+        <p>Panasonic</p>
+        <p>Smart Clinic</p>
+    </div> -->
+
+    <script type="text/javascript" src="js/login.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.form').submit(function() {
+            var username = $('#username').val().length;         
+            var password = $('#password').val().length;         
+ 
+            if (username == 0 && password == 0) {                
+                $(".pesan-nama").css('display','block');
+                $(".pesan-password").css('display','block');
+                return false;
+            }
+
+            else if (username == 0) {                
+                $(".pesan-nama").css('display','block');
+                return false;
+            }
+
+            if (password == 0) {                
+                $(".pesan-password").css('display','block');
+                return false;
+            }
+
+            if (username != 0 && password != 0) {                
+                $(".pesan-nama").css('display','none');
+                $(".pesan-password").css('display','none');
+                return true;
+            }
+        });
+
+        $('.form').keyup(function() {
+            var username = $('#username').val().length;         
+            var password = $('#password').val().length;         
+            
+            if (username == 0) {                
+                $(".pesan-nama").css('display','block');
+            }
+
+            if (username != 0) {                
+                $(".pesan-nama").css('display','none');
+            }
+
+            if (password == 0) {                
+                $(".pesan-password").css('display','block');
+            }
+
+            if (password != 0) {                
+                $(".pesan-password").css('display','none');
+            }
+        });
+    });
+</script>
+</body>
+</html>
