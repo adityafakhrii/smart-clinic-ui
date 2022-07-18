@@ -15,8 +15,22 @@
     color: red;
 }
 
+.ongoing{
+    color: #f1d900;
+}
+
+.treated{
+    color: limegreen;
+}
+
+.void{
+    color: var(--black2);
+}
+
 :root{
     --blue: #287bff;
+    --blue2: #024ec9;
+    --yellow: #FCE300;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
@@ -73,8 +87,8 @@ body{
     margin-top: 20px;
 }
 
-.navigation ul li:nth-child(2){
-    margin-bottom: 400px;
+.navigation ul li.mb-350{
+    margin-bottom: 350px;
 }
 
 .navigation ul li a{
@@ -178,6 +192,7 @@ body{
     width: 60px;
     height: 60px;
     /* background: #ccc; */
+    color: var(--black2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,7 +219,7 @@ body{
     padding-left: 35px;
     font-size: 18px;
     outline: none;
-    border: 1px solid var(--black2);
+    border: 1px solid var(--blue);
 }
 
 .search label ion-icon{
@@ -212,9 +227,10 @@ body{
     top: 10px;
     left: 10px;
     font-size: 1.2em;
+    color: var(--black2);
 }
 
-.user{
+.notif{
     position: relative;
     width: 40px;
     height: 40px;
@@ -223,13 +239,14 @@ body{
     cursor: pointer;
 }
 
-.user img{
+.notif ion-icon{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    color: var(--blue);
 }
 
 .cardBox{
@@ -237,48 +254,57 @@ body{
     width: 100%;
     padding: 20px;
     display: grid;
+    margin-top: 10px;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 30px;
 }
 
 .cardBox .card{
     position: relative;
-    background-color: var(--white);
+    background-color: var(--blue);
     padding: 30px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    color: var(--white);
+    font-weight: 300;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cardBox .bgYellow{
+    background-color: var(--yellow);
+    color: #0056A8;
 }
 
 .cardBox .card .numbers{
     position: relative;
     font-weight: 500;
-    font-size: 1.6em;
-    color: var(--blue);
+    font-size: 1.5em;
 }
 
 .cardBox .card .cardName{
-    color: var(--black2);
     font-size: 1em;
     margin-top: 6px;
 }
 
 .cardBox .card .iconBox{
     font-size: 2.5em;
-    color: var(--black2);
 }
 
 .cardBox .card:hover{
-    background-color: var(--blue);
+    background-color: var(--blue2);
 }
 
-.cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBox{
-    color: var(--white);
+.cardBox .bgYellow:hover{
+    background-color: #e2cc01;
+    /* color: #0056A8; */
 }
+
+.cardBox .card .fontBigger{
+    font-size: 2em;
+}
+
 
 .details{
     position: relative;
@@ -303,6 +329,34 @@ body{
 .details .recentOrders .print{
     font-size: 1.5em;
     margin-right: 20px;
+    display: flex;
+}
+
+.registerColumn{
+    margin-left: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    right: 100px;
+    top: 2px;
+}
+
+.registerColumn:hover{
+    background-color: var(--blue2);
+}
+
+.registerColumn ion-icon{
+    font-size: .8em;
+}
+
+.registerColumn a{
+    text-decoration: none;
+    font-size: .7em;
+    color: var(--white);
+    margin-left: 5px;
 }
 
 .details .recentOrders .print:hover{
@@ -367,9 +421,14 @@ body{
     font-size: 1em;
 }
 
+.details .recentOrders table tbody tr td.act{
+    cursor: pointer;
+}
+
 .status .register{
     padding: 2px 4px;
 }
+
 
 
 
