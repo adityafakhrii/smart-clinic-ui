@@ -262,7 +262,7 @@ body{
 .cardBox .card{
     position: relative;
     background-color: var(--blue);
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
@@ -270,25 +270,66 @@ body{
     color: var(--white);
     font-weight: 300;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+    transition: ;
 }
 
 .cardBox .bgYellow{
     background-color: var(--yellow);
     color: #0056A8;
+    position: relative;
+    /* height: 120%; */
+    /* padding: 20px; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 300;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    transition: .5s;
 }
 
-.cardBox .card .numbers{
+.cardBox .bgYellow:nth-child(1){
+    height: 90px;
+    /* padding-bottom: 10px; */
+    padding: 12px 20px;
+    
+}
+
+.cardBox .bgYellow:nth-child(2){
+    margin-top: 10px;
+    height: 60px;
+    padding: 15px 20px;
+
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.cardBox .bgYellow:nth-child(2):hover{
+    background-color: var(--blue2);
+}
+
+.cardBox .icon-register{
+    font-size: 2em;
+}
+
+.cardBox .flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardBox .numbers{
     position: relative;
     font-weight: 500;
     font-size: 1.5em;
 }
 
-.cardBox .card .cardName{
+.cardBox .cardName{
     font-size: 1em;
     margin-top: 6px;
 }
 
-.cardBox .card .iconBox{
+.cardBox .iconBox{
     font-size: 2.5em;
 }
 
@@ -301,7 +342,7 @@ body{
     /* color: #0056A8; */
 }
 
-.cardBox .card .fontBigger{
+.cardBox .fontBigger{
     font-size: 2em;
 }
 
@@ -330,33 +371,6 @@ body{
     font-size: 1.5em;
     margin-right: 20px;
     display: flex;
-}
-
-.registerColumn{
-    margin-left: 10px;
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;
-    display: flex;
-    right: 100px;
-    top: 2px;
-}
-
-.registerColumn:hover{
-    background-color: var(--blue2);
-}
-
-.registerColumn ion-icon{
-    font-size: .8em;
-}
-
-.registerColumn a{
-    text-decoration: none;
-    font-size: .7em;
-    color: var(--white);
-    margin-left: 5px;
 }
 
 .details .recentOrders .print:hover{
